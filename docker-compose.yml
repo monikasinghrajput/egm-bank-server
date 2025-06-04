@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  egm-bank-server:
+    image: ${DOCKERHUB_USERNAME:-your-dockerhub-username}/egm-bank-server:latest
+    container_name: egm-bank-server
+    ports:
+      - "9001:9001"
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
+    command: ["sh", "-c", "/script.sh"]
