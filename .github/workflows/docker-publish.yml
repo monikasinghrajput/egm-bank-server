@@ -3,7 +3,7 @@ name: Build and Push EGM Roulette Docker Image
 on:
   push:
     branches:
-      - master  # "main" branch pe push hone par trigger hoga
+      - master  # "master" branch pe push hone par trigger hoga
 
 jobs:
   build-and-push:
@@ -28,4 +28,4 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}egm-bank-server:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/egm-bank-server:latest
