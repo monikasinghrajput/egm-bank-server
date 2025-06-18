@@ -6,8 +6,8 @@ services:
     container_name: egm-bank-server
     ports:
       - "9001:9001"
-    env_file:
-      - .env
+    #env_file:
+     # - .env
     volumes:
       - .:/usr/src/app
     restart: unless-stopped
