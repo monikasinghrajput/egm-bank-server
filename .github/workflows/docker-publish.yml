@@ -3,7 +3,7 @@ name: Build and Push EGM Roulette Docker Image
 on:
   push:
     branches:
-      - master  # "master" branch pe push hone par trigger hoga
+      - master  # "master" branch TRIGGER
 
 jobs:
   build-and-push:
